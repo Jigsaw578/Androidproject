@@ -20,7 +20,7 @@
 # Chức năng chưa hoàn thành
 - Chưa có chức năng tìm kiếm
 - Chưa có chức năng hiển thị trạng thái của đơn hàng
-- -	Mở rộng hệ thống hướng tới mục tiêu khách hàng có thể sử dụng ứng dụng. Khách hàng có thể đặt bàn, đặt đồ ăn trước.
+- Mở rộng hệ thống hướng tới mục tiêu khách hàng có thể sử dụng ứng dụng. Khách hàng có thể đặt bàn, đặt đồ ăn trước.
 # Công nghệ sử dụng
 - Ngôn ngữ lập trình: Java
 - Nền tảng sử dụng: IDE Android Studio.
