@@ -17,7 +17,8 @@
 - Thêm mặt hàng mới vào thực đơn
 - Xem thống kê doanh thu, xem danh sách bàn
 - Quản lý nhân viên, thêm sửa xóa nhân viên
-
+# Chức năng chưa hoàn thành
+- Chưa có chức năng tìm kiếm
 # Công nghệ sử dụng
 - Ngôn ngữ lập trình: Java
 - Nền tảng sử dụng: IDE Android Studio.
