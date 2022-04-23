@@ -19,6 +19,7 @@
 - Quản lý nhân viên, thêm sửa xóa nhân viên
 # Chức năng chưa hoàn thành
 - Chưa có chức năng tìm kiếm
+- Chưa có chức năng hiển thị trạng thái của đơn hàng
 # Công nghệ sử dụng
 - Ngôn ngữ lập trình: Java
 - Nền tảng sử dụng: IDE Android Studio.
