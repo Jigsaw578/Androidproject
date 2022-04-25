@@ -54,7 +54,9 @@ public class AdapterRecycleViewStatistic extends RecyclerView.Adapter<AdapterRec
             holder.txt_customstatistic_TongTien.setVisibility(View.INVISIBLE);
         }else {
             holder.txt_customstatistic_TongTien.setVisibility(View.VISIBLE);
+            holder.txt_customstatistic_TongTien.setText(donDatDTO.getTongTien() + " VNĐ");
         }
+
 
         if (donDatDTO.getTinhTrang().equals("true"))
         {
