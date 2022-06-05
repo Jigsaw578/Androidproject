@@ -1,6 +1,7 @@
 package com.sinhvien.OrderDrinkApp.Fragments;
 
 import android.content.ClipData;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -31,6 +33,8 @@ import com.sinhvien.OrderDrinkApp.DTO.DonDatDTO;
 import com.sinhvien.OrderDrinkApp.DTO.LoaiMonDTO;
 import com.sinhvien.OrderDrinkApp.R;
 
+import android.content.SharedPreferences;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
@@ -46,6 +50,8 @@ public class DisplayHomeFragment extends Fragment implements View.OnClickListene
     List<DonDatDTO> donDatDTOS;
     AdapterRecycleViewCategory adapterRecycleViewCategory;
     AdapterRecycleViewStatistic adapterRecycleViewStatistic;
+    SharedPreferences sharedPreferences;
+    int maquyen = 0;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -77,7 +83,8 @@ public class DisplayHomeFragment extends Fragment implements View.OnClickListene
         layout_displayhome_XemNV.setOnClickListener(this);
         txt_displayhome_ViewAllCategory.setOnClickListener(this);
         txt_displayhome_ViewAllStatistic.setOnClickListener(this);
-
+        sharedPreferences = this.getActivity().getSharedPreferences("luuquyen",Context.MODE_PRIVATE);
+        maquyen = sharedPreferences.getInt("maquyen",0);
         return view;
     }
 
@@ -89,6 +96,7 @@ public class DisplayHomeFragment extends Fragment implements View.OnClickListene
         rcv_displayhome_LoaiMon.setAdapter(adapterRecycleViewCategory);
         adapterRecycleViewCategory.notifyDataSetChanged();
     }
+    //lấy file share prefer
 
     private void HienThiDonTrongNgay(){
         rcv_displayhome_DonTrongNgay.setHasFixedSize(true);
@@ -136,11 +144,16 @@ public class DisplayHomeFragment extends Fragment implements View.OnClickListene
 
                 break;
             case R.id.layout_displayhome_XemNV:
+
+                if(maquyen == 1){
                 FragmentTransaction tranDisplayStaff= getActivity().getSupportFragmentManager().beginTransaction();
                 tranDisplayStaff.replace(R.id.contentView,new DisplayStaffFragment());
                 tranDisplayStaff.addToBackStack(null);
                 tranDisplayStaff.commit();
                 navigationView.setCheckedItem(R.id.nav_staff);
+                }else {
+                    Toast.makeText(this.getActivity().getApplicationContext(),"Bạn không có quyền truy cập",Toast.LENGTH_SHORT).show();
+                }
 
                 break;
 
