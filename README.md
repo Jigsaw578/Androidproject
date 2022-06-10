@@ -1,7 +1,7 @@
 # Androidproject
 # Thành viên trong nhóm
 - Nhóm trưởng: Nguyễn Quốc Thịnh
-- Thành Viên: Nguyễn Thành Vinh, Nguyễn Tuần Vinh, Nguyễn Tuấn Dương, Nguyễn Đức Hùng
+- Thành Viên: Nguyễn Thành Vinh, Nguyễn Tuần Vinh
 # Ứng dụng quản lý nhà hàng
 - Tên ứng dụng: Ứng dụng quản lý nhà hàng
 - Quản lý hoạt động kinh doanh đơn giản hơn, dễ dàng hơn, tổng hợp đơn hàng nhanh chóng
